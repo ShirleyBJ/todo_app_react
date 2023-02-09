@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import Header from "./components/header/Header.jsx";
+import CheckboxElement from "./components/checkbox/CheckboxElement.jsx";
+import TagElement from "./components/tag/TagElement.jsx";
+import TitleBox from "./components/input/TitleBox.jsx";
+import DescriptionBox from "./components/input/DescriptionBox.jsx";
+import Button from "./components/button/Button.jsx";
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <CheckboxElement/>
+      <TagElement/>
+      <TitleBox/>
+      <DescriptionBox/>
+      <Button text="Button"/>
     </div>
   );
 }
