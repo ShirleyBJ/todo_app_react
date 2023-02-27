@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <>
-            
+        <div className="text-center">
+
             <div className="h-96 flex flex-col justify-end">
                 <h1 className="my-6">
                     <span className="text-[#D1E5F7] text-5xl font-bold">t</span>
@@ -29,7 +29,7 @@ function Home() {
                 <img src={image_home} alt="" />
                 <Task taskTitle="Download todo app" taskDescription="The first step for better life" />
             </div>
-        </>
+        </div>
     )
 }
 

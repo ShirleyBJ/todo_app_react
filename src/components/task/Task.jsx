@@ -7,8 +7,9 @@ import CheckboxElement from "../checkbox/CheckboxElement";
 import { FaTrash } from "@react-icons/all-files/fa/FaTrash";
 import { FaPen } from "@react-icons/all-files/fa/FaPen";
 
-function Task({ taskTitle, taskDescription
+function Task({ taskTitle, taskDescription, onDelete, onToggle, isDone
 }) {
+    
     return (
         <>
             <section className="bg-[#FFF9DE] m-4 p-2 rounded-lg">
@@ -26,21 +27,18 @@ function Task({ taskTitle, taskDescription
                 </div>
                 <div className="flex justify-between m-2 items-center mt-2">
                     <span className="flex justify-evenly">
-                        <Sticker />
-                        <Sticker />
-                        <Sticker />
+                        <Sticker color="#DAF2D6"/>
                         <Sticker />
                     </span>
                     <div className="flex items-center text-[color:var(--gray)]">
-                        <CheckboxElement />
-                        <span className="mx-1">
-                            <FaTrash />
-                        </span>
+                        <CheckboxElement onToggle={onToggle}/>
                         <span className="mx-1">
                             <FaPen />
                         </span>
+                        <span className="mx-1">
+                            <FaTrash  onClick={onDelete }/>
+                        </span>
                     </div>
-
                 </div>
             </section>
         </>

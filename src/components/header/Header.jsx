@@ -9,7 +9,7 @@ function Header() {
             <header className="flex items-end justify-between mt-3 mx-4 text-stone-600 mb-8">
                 <h1 className="text-3xl font-semibold">todo</h1>
                 <div className="text-2xl">
-                    <FaPlus onClick={(e) => addTask(e)}/>
+                    <FaPlus onClick={addTask}/>
                 </div>
             </header>
         </>
