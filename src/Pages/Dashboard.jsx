@@ -2,12 +2,39 @@ import Header from "../components/header/Header"
 import FilterBar from "../components/filterPanel/FilterBar.jsx";
 import Task from "../components/task/Task.jsx";
 
+import { useState } from "react";
+
+
 function Dashboard() {
+    const [tasks,setTasks] = useState([
+        {
+            id: 1,
+            title: "Task 1",
+            description : "Task description",
+            reminder: true,
+        },
+        {
+            id: 2,
+            title: "Task 2",
+            description : "Task description",
+            reminder: false,
+        },
+        {
+            id: 1,
+            title: "Task 3",
+            description : "Task description",
+            reminder: true,
+        }
+    ])
+
+    
     return (
         <>
             <Header />
             <FilterBar />
-            <Task taskTitle="First task title" taskDescription="Maecenas molestie dui justo, sit amet congue felis auctor sagittis. Etiam facilisis semper dapibus. Vivamus commodo purus eget sem tincidunt, vel efficitur felis bibendum. Nulla sed mollis justo. Fusce condimentum libero aliquet libero tincidunt, et euismod quam blandit. Praesent sagittis arcu volutpat posuere fermentum. Nam rutrum sodales purus, id fringilla massa fringilla ac. Quisque dapibus erat ac sollicitudin pulvinar." />
+            {tasks.map((task) => (
+                <Task key={task.id} taskTitle={task.title} taskDescription={task.description} taskReminder={task.reminder} />
+            ))}
         </>
     )
 }
