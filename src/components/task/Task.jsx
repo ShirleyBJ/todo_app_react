@@ -5,12 +5,13 @@ import DescriptionTask from "./DescriptionTask";
 import Sticker from "../tag/Sticker";
 import CheckboxElement from "../checkbox/CheckboxElement";
 
-function Task() {
+function Task({taskTitle, taskDescription
+}) {
     return (
         <>
             <section className="bg-[#FFF9DE] m-4 p-2 rounded-lg">
                 <div className="flex justify-between px-2 items-center">
-                    <TitleTask taskTitle="The first title task"/>
+                    <TitleTask taskTitle={taskTitle}/>
                     <div>
                         {/* TODO: Dropdown menu with state*/}
                         <span className="text-1xl text-stone-400">
@@ -18,8 +19,8 @@ function Task() {
                         </span>
                     </div>
                 </div>
-                <div>
-                    <DescriptionTask description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis tortor eget tempor lacinia. Quisque volutpat quam consectetur ex consectetur, id mattis nisl lobortis. Etiam ullamcorper nibh ut dui elementum, non egestas tortor pellentesque. Cras volutpat luctus mattis. Vivamus dictum fringilla mi in sodales. Nam a lacinia lacus, id molestie justo."/>
+                <div className="text-left px-2">
+                    <DescriptionTask description={taskDescription}/>
                 </div>
                 <div className="flex justify-between m-2 items-center mt-2">
                     <span className="flex justify-evenly">
