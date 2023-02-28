@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../components/button/Button";
+import ButtonSubmit from "../components/button/ButtonSubmit";
 import TitleBox from "../components/input/TitleBox";
 import DescriptionBox from "../components/input/DescriptionBox";
 import TitleTask from "../components/task/TitleTask";
@@ -10,9 +10,9 @@ function AddTask(){
         <>
             <nav className="flex justify-between mx-4 my-8 w-[90%]">
                 <Link to="/dashboard">
-                    <span className="text-[color:var(--gray)]">Cancel</span>
+                    <span className="text-[color:var(--gray)] hover:underline-offset-8">Cancel</span>
                 </Link>
-                <Button text="Add"/>
+                <ButtonSubmit text="Add"/>
             </nav>
             <main className="w-[90%] m-4 my-8">
                 <TitleBox placeholder="add a title..."/>
