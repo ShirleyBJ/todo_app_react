@@ -12,18 +12,21 @@ function Dashboard() {
             title: "Task 1",
             description: "Task description",
             reminder: false,
+            tags : ['work'],
         },
         {
             id: 2,
             title: "Task 2",
             description: "Task description",
             reminder: false,
+            tags : ['study'],
         },
         {
             id: 3,
             title: "Task 3",
             description: "Task description",
             reminder: false,
+            tags : ['family'],
         }
     ])
     const [isDone, setIsDone] = useState(false);
