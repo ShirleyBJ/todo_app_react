@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
 import Dashboard from './Pages/Dashboard';
+import AddTask from './Pages/AddTask';
 
 //Import of React Router Dom elements
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard/>
+            },
+            {
+                path: "/addTask",
+                element: <AddTask/>
             }
         ]
     },

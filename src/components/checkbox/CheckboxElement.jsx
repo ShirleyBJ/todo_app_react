@@ -1,7 +1,6 @@
 
-function CheckboxElement({onToggle}){
-    
-
+function CheckboxElement({onToggle }){
+//TODO : Default checked en fonction de l'état reminder
     return (
         <>
         {/* TODO: chage style of element if checkboxes is checked - state*/}
