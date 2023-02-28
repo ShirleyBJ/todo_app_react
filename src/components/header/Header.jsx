@@ -2,9 +2,6 @@ import { FaPlus } from "@react-icons/all-files/fa/FaPlus";
 import { Link } from "react-router-dom";
 
 function Header() {
-    const addTask = (e) =>{
-        console.log(e);
-    }
     return (
         <>
             <header className="flex items-end justify-between mt-3 mx-4 text-stone-600 mb-8">
