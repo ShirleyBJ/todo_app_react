@@ -10,7 +10,7 @@ import TagElement from "../components/tag/TagElement";
 function AddTask() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [reminder, setReminder] = useState(false);
+    // const [reminder, setReminder] = useState(false);
     const [tags, setTags] = useState([]);
     //TODO: add tag element in todo list
 
