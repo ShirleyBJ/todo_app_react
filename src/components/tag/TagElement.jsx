@@ -1,4 +1,7 @@
-function TagElement({color, tagName, getTagName}) {
+import Sticker from "./Sticker";
+
+function TagElement({ color, tagName, getTagName }) {
+    //console.log(color);
     return (
         <>
             <div className="flex items-center">

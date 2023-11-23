@@ -12,21 +12,21 @@ function Dashboard() {
             title: "Task 1",
             description: "Task description",
             reminder: false,
-            tags : ['work'],
+            tags: ['work'],
         },
         {
             id: 2,
             title: "Task 2",
             description: "Task description",
             reminder: false,
-            tags : ['study'],
+            tags: ['study'],
         },
         {
             id: 3,
             title: "Task 3",
             description: "Task description",
             reminder: false,
-            tags : ['family'],
+            tags: ['family'],
         }
     ])
     const [isDone, setIsDone] = useState(false);
@@ -38,9 +38,9 @@ function Dashboard() {
     }
 
     //Toggle done state
-    const toggleReminder = (e, id) => {
-        console.log(e.target.checked, id);
-        setIsDone(tasks.map((task) => task.id === id ? { ...task, reminder: e.target.checked} : task))
+    const isTaskDone = (e, id) => {
+        //console.log(e.target.checked, id);
+        setIsDone(tasks.map((task) => task.id === id ? { ...task, reminder: e.target.checked } : task))
     }
 
     return (
@@ -49,7 +49,7 @@ function Dashboard() {
             <FilterBar />
             {tasks.length > 0 ? (
                 tasks.map((task) => (
-                    <Task key={task.id} taskTitle={task.title} taskDescription={task.description} isDone={isDone} onDelete={() => deleteTask(task.id)} onToggle={(e) => toggleReminder(e, task.id)} />
+                    <Task key={task.id} taskTitle={task.title} taskDescription={task.description} isTaskDone={isDone} onDelete={() => deleteTask(task.id)} onToggle={(e) => isTaskDone(e, task.id)} taskBg={isDone ? "bg-[#69665C]" : "bg-[#FFF9DE]"} />
                 ))
             ) : (
                 'No task To Show'

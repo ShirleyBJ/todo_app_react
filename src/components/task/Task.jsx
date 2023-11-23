@@ -7,11 +7,13 @@ import CheckboxElement from "../checkbox/CheckboxElement";
 import { FaTrash } from "@react-icons/all-files/fa/FaTrash";
 import { FaPen } from "@react-icons/all-files/fa/FaPen";
 
-function Task({ taskTitle, taskDescription, onDelete, onToggle, isDone,
+function Task({ taskTitle, taskDescription, onDelete, onToggle, isTaskDone, taskBg
 }) {
+    console.log(isTaskDone);
     return (
         <>
-            <section className="bg-[#FFF9DE] m-4 p-2 rounded-lg">
+            {/* TODO : change the color of task depend on isTaskDone */}
+            <section className={`${taskBg} m-4 p-2 rounded-lg`}>
                 <div className="flex justify-between px-2 items-center">
                     <TitleTask taskTitle={taskTitle} />
                     <div>
@@ -26,7 +28,7 @@ function Task({ taskTitle, taskDescription, onDelete, onToggle, isDone,
                 </div>
                 <div className="flex justify-between m-2 items-center mt-2">
                     <span className="flex justify-evenly">
-                        <Sticker color="#DAF2D6"/>
+                        <Sticker color="#DAF2D6" />
                         <Sticker />
                     </span>
                     <div className="flex items-center text-[color:var(--gray)]">
@@ -35,11 +37,11 @@ function Task({ taskTitle, taskDescription, onDelete, onToggle, isDone,
                             <FaPen />
                         </span>
                         <span className="mx-1">
-                            <FaTrash  onClick={onDelete }/>
+                            <FaTrash onClick={onDelete} />
                         </span>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 }
